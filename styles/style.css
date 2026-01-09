@@ -316,6 +316,7 @@
 .step {
   display: flex;
   flex-direction: column;
+  flex-basis: 220px;
 }
 .step__title {
   margin: 0;

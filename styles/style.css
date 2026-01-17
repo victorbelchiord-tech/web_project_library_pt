@@ -1,10 +1,21 @@
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 .page {
-  min-width: 1100px;
+  width: 100%;
   max-width: 1600px;
   margin: auto;
   font-family: Arial, sans-serif;
   font-size: 16px;
   line-height: 20px;
+  overflow-x: hidden;
 }
 
 .header {
@@ -397,4 +408,167 @@
 
 .footer__copyright {
   margin: 100px 0 0;
+}
+
+@media (max-width: 768px) {
+  .header {
+    display: flex; /* Garante que o flex continue ativo */
+    flex-direction: column;
+    height: auto; /* Permite que o fundo branco estique conforme o conteúdo */
+    min-height: auto; /* Remove a trava de altura mínima */
+    max-height: none; /* IMPORTANTE: Remove o limite de 800px que corta a imagem */
+    padding: 20px 20px 40px; /* Dá um respiro maior na parte de baixo para o address */
+  }
+
+  .nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .nav__links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .header__content {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Cria espaço entre o texto e a imagem */
+  }
+  .header__title {
+    font-size: 32px; /* Título menor para caber na tela */
+    line-height: 40px;
+    margin-top: 20px;
+  }
+
+  .header__image {
+    max-width: 100%; /* Garante que a ilustração não saia da tela */
+    height: auto;
+    order: 2; /* Garante que a imagem fique abaixo do texto */
+  }
+
+  .header__footer {
+    margin-top: 30px;      /* Empurra o endereço (address) um pouco mais para baixo */
+    justify-content: center; /* Centraliza o endereço no mobile */
+    position: static;      /* Garante que ele siga o fluxo normal e não flutue */
+  }
+
+  .content {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  /* --- 2. SEÇÃO DE ESCOLHAS (CARDS) --- */
+  .staff {
+    padding: 60px 20px; /* Reduz o padding lateral */
+  }
+
+  .staff__cards {
+    flex-direction: column; /* Empilha os cards */
+    align-items: center;
+    gap: 20px;
+  }
+
+  .card {
+    width: 100%;       /* Card ocupa a largura da tela */
+    max-width: 320px;  /* Mas não fica gigante */
+    height: auto;      /* Deixa o card esticar conforme o texto */
+    padding: 20px;
+  }
+
+  /* --- 3. SEÇÃO DE EVENTOS --- */
+  .events {
+    padding: 40px 20px;
+    flex-direction: column; /* Empilha o texto e a imagem do café */
+    align-items: center;
+  }
+
+  .events__content {
+    flex-basis: auto;
+    width: 100%;
+    text-align: center;
+  }
+
+  .event-info__item {
+    justify-content: center; /* Centraliza ícones e textos de data/local */
+  }
+
+  .events__cover {
+    flex-basis: auto;
+    width: 100%;
+    margin-top: 40px;
+  }
+
+  /* --- 4. SEÇÃO DE MEMBROS (PASSOS) --- */
+  .membership__steps {
+    flex-direction: column; /* Empilha os passos 1, 2, 3 e 4 */
+    align-items: center;
+    gap: 30px;
+    margin-top: 50px;
+  }
+
+  .step {
+    flex-basis: auto;
+    width: 100%;
+    text-align: center;
+  }
+
+  .step__title {
+    justify-content: center;
+  }
+
+  /* --- 5. FOOTER --- */
+  .footer {
+    padding: 40px 20px;
+  }
+
+  .footer__columns {
+    flex-direction: column; /* Empilha as colunas do rodapé */
+    align-items: center;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .footer__column_content_hours {
+    margin: 0; /* Remove o margin-left: auto que empurrava para a direita */
+  }
+
+  .footer__copyright {
+    margin-top: 40px;
+    text-align: center;
+  }
+
+  .events__cover {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: static; /* Remove a referência para os itens absolutos */
+  }
+
+  .person {
+    position: static;      /* Elas param de flutuar e entram na fila */
+    margin-top: 20px;      /* Espaço entre as fotos */
+    display: flex;
+    flex-direction: row;   /* Foto ao lado do nome */
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  /* Ajusta o tamanho das fotos para não ficarem gigantes no celular */
+  .person__image_size_l,
+  .person__image_size_m,
+  .person__image_size_s {
+    width: 60px; /* Tamanho padrão para todas no mobile */
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%; /* Opcional: deixa as fotos redondinhas, fica bem moderno */
+  }
+
+  .person__caption {
+    text-align: left;
+    font-size: 16px;
+  }
 }

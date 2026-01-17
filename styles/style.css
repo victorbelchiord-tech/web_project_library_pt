@@ -366,9 +366,6 @@ img {
   margin-left: auto;
 }
 
-.footer__column_content_social {
-}
-
 .footer__logo {
   size: 58px 80px;
 }
@@ -449,9 +446,9 @@ img {
   }
 
   .header__footer {
-    margin-top: 30px;      /* Empurra o endereço (address) um pouco mais para baixo */
+    margin-top: 30px; /* Empurra o endereço (address) um pouco mais para baixo */
     justify-content: center; /* Centraliza o endereço no mobile */
-    position: static;      /* Garante que ele siga o fluxo normal e não flutue */
+    position: static; /* Garante que ele siga o fluxo normal e não flutue */
   }
 
   .content {
@@ -471,9 +468,9 @@ img {
   }
 
   .card {
-    width: 100%;       /* Card ocupa a largura da tela */
-    max-width: 320px;  /* Mas não fica gigante */
-    height: auto;      /* Deixa o card esticar conforme o texto */
+    width: 100%; /* Card ocupa a largura da tela */
+    max-width: 320px; /* Mas não fica gigante */
+    height: auto; /* Deixa o card esticar conforme o texto */
     padding: 20px;
   }
 
@@ -547,10 +544,10 @@ img {
   }
 
   .person {
-    position: static;      /* Elas param de flutuar e entram na fila */
-    margin-top: 20px;      /* Espaço entre as fotos */
+    position: static; /* Elas param de flutuar e entram na fila */
+    margin-top: 20px; /* Espaço entre as fotos */
     display: flex;
-    flex-direction: row;   /* Foto ao lado do nome */
+    flex-direction: row; /* Foto ao lado do nome */
     align-items: center;
     gap: 15px;
     width: 100%;

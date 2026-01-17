@@ -407,7 +407,7 @@ img {
   margin: 100px 0 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1138px) {
   .header {
     display: flex; /* Garante que o flex continue ativo */
     flex-direction: column;
